@@ -884,6 +884,7 @@ var SearchResultComponent = /** @class */ (function (_super) {
         this.route.params.subscribe(function (data) {
             if (data['searchTerm']) {
                 _this.searchTerm = data['searchTerm'];
+                _this.searchService.getItemsBySearchWord(_this.searchTerm);
             }
         });
     };
@@ -1180,7 +1181,6 @@ var SearchService = /** @class */ (function () {
         configurable: true
     });
     SearchService.prototype.search = function (searchWord) {
-        this.getItemsBySearchWord(searchWord);
         this.router.navigate(['/search-results', searchWord]);
     };
     SearchService.prototype.getItemsBySearchWord = function (searchWord) {
