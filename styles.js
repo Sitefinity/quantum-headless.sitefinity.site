@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/main.min.css":
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/main.min.css":
 /*!****************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/css/main.min.css ***!
   \****************************************************************************************************/
@@ -11,18 +11,18 @@ module.exports = "@charset \"UTF-8\"; /*!\r\n * Bootstrap v3.3.7 (http://getboot
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/quantum-headless.css":
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/quantum-headless.css":
 /*!************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/css/quantum-headless.css ***!
   \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.news_image {\r\n  max-height: 400px;\r\n  overflow: hidden;\r\n}\r\n\r\n.news_image.news_image_detail img {\r\n  width: 100%;\r\n}\r\n\r\nlist a {\r\n  cursor: pointer;\r\n}\r\n\r\n.load-more a {\r\n  display: block;\r\n  margin-bottom: 40px;\r\n  color: #00b4c9;\r\n  font-size: 16px;\r\n}\r\n\r\n.svg-inline--fa.fa-w-16 {\r\n  width: 1em;\r\n}\r\n\r\n.showcase_row {\r\n  padding-top: 60px;\r\n  padding-bottom: 60px;\r\n  margin-bottom: -5px;\r\n}\r\n\r\n.showcase_row h2 {\r\n  margin-bottom: 40px;\r\n  margin-top: 0;\r\n}\r\n\r\n.mt-3 {\r\n  margin-top: 30px !important;\r\n}\r\n\r\n.ml-2 {\r\n  margin-left: 20px;\r\n}\r\n\r\n.pr-2 {\r\n  padding-right: 20px !important;\r\n}\r\n\r\n.github-banner {\r\n  padding: 5px 15px;\r\n  color: #fff;\r\n  font-size: 15px;\r\n  background-color: #81dfb0;\r\n}\r\n\r\n.categories-list a,\r\n.sf-Tags a {\r\n  cursor: pointer;\r\n}\r\n\r\n.homepage-card-banner,\r\n.homepage-card-banner img {\r\n  min-height: 300px;\r\n}\r\n"
+module.exports = "\r\n.news_image {\r\n  max-height: 400px;\r\n  overflow: hidden;\r\n}\r\n\r\n.news_image.news_image_detail img {\r\n  width: 100%;\r\n}\r\n\r\nlist a {\r\n  cursor: pointer;\r\n}\r\n\r\n.load-more a {\r\n  display: block;\r\n  margin-bottom: 40px;\r\n  color: #00b4c9;\r\n  font-size: 16px;\r\n}\r\n\r\n.svg-inline--fa.fa-w-16 {\r\n  width: 1em;\r\n}\r\n\r\n.showcase_row {\r\n  padding-top: 60px;\r\n  padding-bottom: 60px;\r\n  margin-bottom: -5px;\r\n}\r\n\r\n.showcase_row h2 {\r\n  margin-bottom: 40px;\r\n  margin-top: 0;\r\n}\r\n\r\n.mt-3 {\r\n  margin-top: 30px !important;\r\n}\r\n\r\n.ml-2 {\r\n  margin-left: 20px;\r\n}\r\n\r\n.pr-2 {\r\n  padding-right: 20px !important;\r\n}\r\n\r\n.github-banner {\r\n  padding: 5px 15px;\r\n  color: #fff;\r\n  font-size: 15px;\r\n  background-color: #81dfb0;\r\n}\r\n\r\n.categories-list a,\r\n.sf-Tags a {\r\n  cursor: pointer;\r\n}\r\n\r\n.homepage-card-banner,\r\n.homepage-card-banner img {\r\n  min-height: 300px;\r\n}\r\n\r\n.bold {\r\n  font-weight: bold;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/quantum-style.css":
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/quantum-style.css":
 /*!*********************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/css/quantum-style.css ***!
   \*********************************************************************************************************/
@@ -532,7 +532,7 @@ module.exports = function (css) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./main.min.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/main.min.css");
+var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./main.min.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/main.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -562,7 +562,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./quantum-headless.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/quantum-headless.css");
+var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./quantum-headless.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/quantum-headless.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -592,7 +592,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./quantum-style.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./src/css/quantum-style.css");
+var content = __webpack_require__(/*! !../../node_modules/raw-loader!../../node_modules/postcss-loader/lib??embedded!./quantum-style.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/css/quantum-style.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
