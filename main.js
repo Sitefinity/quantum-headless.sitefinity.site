@@ -134,7 +134,7 @@ var TestimonialFormComponent = /** @class */ (function () {
     }
     TestimonialFormComponent.prototype.submitTestimonial = function (testimonialForm) {
         var _this = this;
-        if (testimonialForm.valid) {
+        if (testimonialForm.valid && this.isPhotoSelected) {
             this.creatingTestimonial = true;
             this.testimonialsService.createTestimonial(this.model).subscribe(function (isCreated) {
                 _this.creatingTestimonial = false;
@@ -160,6 +160,7 @@ var TestimonialFormComponent = /** @class */ (function () {
             img.src = fr.result.toString();
         };
         fr.readAsDataURL(image);
+        this.isPhotoSelected = true;
     };
     TestimonialFormComponent.ctorParameters = function () { return [
         { type: _services_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
@@ -383,7 +384,7 @@ var OidcProvider = /** @class */ (function () {
         return OIDC_PROVIDER_NAME;
     };
     OidcProvider.prototype.getPriority = function () {
-        return 3;
+        return 2;
     };
     OidcProvider.prototype.isAvailable = function () {
         var _this = this;
@@ -2422,7 +2423,7 @@ var OauthProvider = /** @class */ (function () {
         return OAUTH_PROVIDER_NAME;
     };
     OauthProvider.prototype.getPriority = function () {
-        return 2;
+        return 1;
     };
     OauthProvider.prototype.isAvailable = function () {
         this.initSettingsObj();
@@ -3039,7 +3040,7 @@ var RxBaseComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-small container mt-6\">\r\n  <form #f=\"ngForm\" (ngSubmit)=\"submitTestimonial(f)\">\r\n    <div class=\"form-group\">\r\n      <label for=\"Author\">Author:</label>\r\n      <input\r\n        [(ngModel)]=\"model.TestimonialAuthor\"\r\n        class=\"form-control\"\r\n        required\r\n        id=\"Author\"\r\n        type=\"text\"\r\n        name=\"Author\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"JobTitle\">Job Title:</label>\r\n      <input\r\n        class=\"form-control\"\r\n        [(ngModel)]=\"model.JobTitle\"\r\n        id=\"JobTitle\"\r\n        name=\"JobTitle\"\r\n        type=\"text\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Company\">Company:</label>\r\n      <input\r\n        [(ngModel)]=\"model.Company\"\r\n        class=\"form-control\"\r\n        id=\"Company\"\r\n        name=\"Company\"\r\n        type=\"text\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Company\">Photo:</label>\r\n      <input\r\n        required\r\n        (change)=\"onImageChange($event)\"\r\n        id=\"Photo\"\r\n        name=\"Photo\"\r\n        type=\"file\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Quote\">Quote:</label>\r\n      <textarea\r\n        [(ngModel)]=\"model.Quote\"\r\n        class=\"form-control\"\r\n        required\r\n        id=\"Quote\"\r\n        name=\"Quote\"></textarea>\r\n    </div>\r\n    <button [disabled]=\"f.invalid\" type=\"submit\" class=\"btn btn-primary btn-quantum-homepage\">Submit</button>\r\n    <div *ngIf=\"creatingTestimonial\" class=\"sf-loading mt-1\"><span></span></div>\r\n  </form>\r\n  <div class=\"alert alert-info mt-3\" *ngIf=\"createdTestimonialMessage\">\r\n    {{createdTestimonialMessage}}\r\n  </div>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-small container mt-6\">\r\n  <form #f=\"ngForm\" (ngSubmit)=\"submitTestimonial(f)\">\r\n    <div class=\"form-group\">\r\n      <label for=\"Author\">Author:</label>\r\n      <input\r\n        [(ngModel)]=\"model.TestimonialAuthor\"\r\n        class=\"form-control\"\r\n        required\r\n        id=\"Author\"\r\n        type=\"text\"\r\n        name=\"Author\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"JobTitle\">Job Title:</label>\r\n      <input\r\n        class=\"form-control\"\r\n        [(ngModel)]=\"model.JobTitle\"\r\n        id=\"JobTitle\"\r\n        name=\"JobTitle\"\r\n        type=\"text\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Company\">Company:</label>\r\n      <input\r\n        [(ngModel)]=\"model.Company\"\r\n        class=\"form-control\"\r\n        id=\"Company\"\r\n        name=\"Company\"\r\n        type=\"text\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Company\">Photo:</label>\r\n      <input\r\n        required\r\n        (change)=\"onImageChange($event)\"\r\n        id=\"Photo\"\r\n        name=\"Photo\"\r\n        type=\"file\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"Quote\">Quote:</label>\r\n      <textarea\r\n        [(ngModel)]=\"model.Quote\"\r\n        class=\"form-control\"\r\n        required\r\n        id=\"Quote\"\r\n        name=\"Quote\"></textarea>\r\n    </div>\r\n    <button [disabled]=\"f.invalid || !isPhotoSelected\" type=\"submit\" class=\"btn btn-primary btn-quantum-homepage\">Submit</button>\r\n    <div *ngIf=\"creatingTestimonial\" class=\"sf-loading mt-1\"><span></span></div>\r\n  </form>\r\n  <div class=\"alert alert-info mt-3\" *ngIf=\"createdTestimonialMessage\">\r\n    {{createdTestimonialMessage}}\r\n  </div>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -3153,7 +3154,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<carousel *ngIf=\"testimonials | async\">\r\n  <slide *ngFor=\"let testimonial of (testimonials | async)\">\r\n    <div class=\"col-md-2 testimonial-quote-icon\">\r\n      <img src=\"assets/images/quote-image.png\" alt=\"quote-image\">\r\n    </div>\r\n    <div class=\"col-md-10 testimonial-quote\">\r\n      <h3>{{testimonial.Quote}}</h3>\r\n      <div class=\"testimonial-image\">\r\n        <div *ngIf=\"testimonial.Photo\" class=\"col-md-2\">\r\n          <img [src]=\"testimonial.Photo.Url\" [alt]=\"testimonial.Photo.AlternativeText\">\r\n        </div>\r\n        <div>\r\n          <strong>{{testimonial.TestimonialAuthor}}</strong>\r\n          <br>\r\n          <span>{{testimonial.JobTitle}},</span>\r\n          <span>{{testimonial.Company}}</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </slide>\r\n</carousel>\r\n<div class=\"center-text form-group\">\r\n  <button class=\"btn btn-primary btn-quantum-homepage\" (click)=\"openTestimonialForm()\" type=\"button\">Submit a testimonial</button>\r\n</div>\r\n\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<carousel *ngIf=\"testimonials | async\">\r\n  <slide *ngFor=\"let testimonial of (testimonials | async)\">\r\n    <div class=\"col-md-2 testimonial-quote-icon\">\r\n      <img src=\"assets/images/quote-image.png\" alt=\"quote-image\">\r\n    </div>\r\n    <div class=\"col-md-10 testimonial-quote\">\r\n      <h3>{{testimonial.Quote}}</h3>\r\n      <div class=\"testimonial-image\">\r\n        <div *ngIf=\"testimonial.Photo[0]\" class=\"col-md-2\">\r\n          <img [src]=\"testimonial.Photo[0].Url\" [alt]=\"testimonial.Photo[0].AlternativeText\">\r\n        </div>\r\n        <div>\r\n          <strong>{{testimonial.TestimonialAuthor}}</strong>\r\n          <br>\r\n          <span>{{testimonial.JobTitle}},</span>\r\n          <span>{{testimonial.Company}}</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </slide>\r\n</carousel>\r\n<div class=\"center-text form-group\">\r\n  <button class=\"btn btn-primary btn-quantum-homepage\" (click)=\"openTestimonialForm()\" type=\"button\">Submit a testimonial</button>\r\n</div>\r\n\r\n\r\n");
 
 /***/ }),
 
